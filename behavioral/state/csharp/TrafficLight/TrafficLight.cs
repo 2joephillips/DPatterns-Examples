@@ -2,7 +2,7 @@ namespace StateMachineDemo
 {
     public class TrafficLight
     {   
-        public ITrafficLightState State {get;set;}
+        private ITrafficLightState State {get;set;}
         public void Change(){
             State.Change(this);
         }

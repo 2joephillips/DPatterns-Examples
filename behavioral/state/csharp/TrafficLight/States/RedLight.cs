@@ -5,16 +5,11 @@ namespace StateMachineDemo.States
 {
     public class RedLight : ITrafficLightState
     {
-        void ITrafficLightState.Change(TrafficLight light)
-        {
-            light.State = new YellowLight();
-        }
-        void ITrafficLightState.Wait(){
-            Thread.Sleep(30000);
-        }
-        void ITrafficLightState.ReportState()
+        public ITrafficLightState Change()
         {
             Console.WriteLine("Red Light - 30 second wait");
+            Thread.Sleep(30000);
+            return new GreenLight();
         }
 
     }

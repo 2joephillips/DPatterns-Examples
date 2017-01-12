@@ -1,7 +1,7 @@
 namespace StateMachineDemo{
-    public interface ITrafficLightState{
-        void Change(TrafficLight light);
-        void Wait();
-        void ReportState();
+    public interface ITrafficLight{
+        void Activate();
+        void Deactivate();
+        void Update();
     }
 }

@@ -8,15 +8,22 @@ namespace StateMachineDemo
         public static void Main(string[] args)
         {
             TrafficLight light = new TrafficLight();
-            light.State = new RedLight();
+            light.Activate();
 
-            for(int count = 0; count < 9; count++){
-                
-                light.ReportState();
-                light.Wait();
-                light.Change();
-            }
-
+            Console.WriteLine("Press ESC to stop");
+            do
+            {
+                while (!Console.KeyAvailable)
+                {
+                    while (light.Running)
+                    {
+                        light.Update();
+                    }
+                }
+            } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
+ 
+            light.Deactivate();
+ 
             Console.ReadLine();
         }
     }

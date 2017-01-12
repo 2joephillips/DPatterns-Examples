@@ -1,17 +1,30 @@
+using StateMachineDemo.States;
+
 namespace StateMachineDemo
 {
-    public class TrafficLight
+    public class TrafficLight :ITrafficLight
     {   
-        private ITrafficLightState State {get;set;}
-        public void Change(){
-            State.Change(this);
+         private ITrafficLightState _state;
+        public bool Running { get; private set; }
+ 
+        public TrafficLight()
+        {
+            _state = new RedLight();
         }
-
-        public void Wait(){
-            State.Wait();
+ 
+        public void Activate()
+        {
+            Running = true;
         }
-        public void ReportState(){
-            State.ReportState();
+ 
+        public void Deactivate()
+        {
+            Running = false;
+        }
+ 
+        public void Update()
+        {
+            _state = _state.Change();
         }
     }
 }

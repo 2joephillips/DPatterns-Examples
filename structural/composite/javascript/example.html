@@ -1,4 +1,6 @@
 <script>
+    document.write("<h1> Structural Composite Javascript Example</h1><br>")
+
     /**
      * Composite
      */
@@ -15,9 +17,9 @@
                 _employees.push(employee)
             },
             performanceSummary: function () {
-                console.log("Team: " + _name);
-                console.log("Supervisor: " + _supervisor.name);
-                console.log("Members Reviews");
+                document.write("<br>Team: " + _name + "<br>");
+                document.write("Supervisor: " + _supervisor.name + "<br>");
+                document.write("Members Reviews <br>");
                 for (var i in _employees) {
                     _employees[i].performanceSummary();
                 }
@@ -34,7 +36,7 @@
         this.name = name;
         this.rating = rating;
         this.performanceSummary = function () {
-            console.log("Performance summary of employee: " + this.name + " is " + this.rating + " out of 5")
+            document.write("Performance summary of employee: " + this.name + " is " + this.rating + " out of 5 <br>")
         }
     }
 
@@ -42,6 +44,7 @@
      /**
      * Usage
      */
+      document.write("Build Employees <br>")
       var jason = new Employee('Jason Lee Scott',3);
       var trini = new Employee ('Trini Kwan',4);
       var zach = new Employee ('Zach Taylor',5);
@@ -51,6 +54,7 @@
       var alpha = new Employee ('Alpha',5);
       var zordon = new Employee ('Zordon',5);
 
+      document.write("Build Team1 <br>")
       var team1 = new Team();
       team1.setUp("team1",alpha);
       team1.add(jason);
@@ -60,10 +64,12 @@
       team1.add(billy);
       team1.add(rose);
 
+      document.write("Build PowerTeam <br><br>")
       var powerTeam = new Team();
       powerTeam.setUp("PowerTeam",zordon)
       powerTeam.add(alpha);
       powerTeam.add(team1);
+      document.write("Start Performance Summaries <br>")
       powerTeam.performanceSummary();
 
 </script>

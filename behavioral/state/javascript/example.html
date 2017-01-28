@@ -19,7 +19,7 @@ var Red = function (light) {
     this.light = light;
  
     this.go = function () {
-        console.log("Red --> for 30 Seconds");
+        document.write("Red --> for 30 Seconds <br>");
         setTimeout(function(){light.change(new Green(light));}, 1000);
     }
 };
@@ -28,7 +28,7 @@ var Yellow = function (light) {
     this.light = light;
  
     this.go = function () {
-        console.log("Yellow --> for 10 seconds");
+        document.write("Yellow --> for 10 seconds <br>");
         setTimeout(function(){light.change(new Red(light));}, 1000);
     }
 };
@@ -36,12 +36,14 @@ var Yellow = function (light) {
 var Green = function (light) {
     this.light = light;
     this.go = function () {
-        console.log("Green --> for 30 Seconds");
+        document.write("Green --> for 30 Seconds <br>");
         setTimeout(function(){light.change(new Yellow(light));}, 1000);
     }
 };
 
 window.onload = function() {
+    document.write("<h1> Behavioral Javascript Example</h1><br>")
+    document.write("Starting Trafficlight <br>")
       var light = new TrafficLight();
     light.start();
 };

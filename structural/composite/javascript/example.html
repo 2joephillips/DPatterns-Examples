@@ -1,0 +1,69 @@
+<script>
+    /**
+     * Composite
+     */
+    var Team = function () {
+        var _employees = [];
+        var _name;
+        var _supervisor;
+        return {
+            setUp: function(name, supervisor){
+                _name = name;
+                _supervisor = supervisor;
+            },
+            add: function (employee) {
+                _employees.push(employee)
+            },
+            performanceSummary: function () {
+                console.log("Team: " + _name);
+                console.log("Supervisor: " + _supervisor.name);
+                console.log("Members Reviews");
+                for (var i in _employees) {
+                    _employees[i].performanceSummary();
+                }
+            }
+        };
+    }
+    /**
+     * Leaf
+     */
+
+    var Employee = function (name, rating) {
+        Employee._id = Employee._id || 1;
+        this.id = Employee._id++;
+        this.name = name;
+        this.rating = rating;
+        this.performanceSummary = function () {
+            console.log("Performance summary of employee: " + this.name + " is " + this.rating + " out of 5")
+        }
+    }
+
+
+     /**
+     * Usage
+     */
+      var jason = new Employee('Jason Lee Scott',3);
+      var trini = new Employee ('Trini Kwan',4);
+      var zach = new Employee ('Zach Taylor',5);
+      var kimberly = new Employee ('Kimberly Ann Hart',3);
+      var billy = new Employee ('Billy Cranston',4);
+      var rose = new Employee ('Tommy Oliver',5);
+      var alpha = new Employee ('Alpha',5);
+      var zordon = new Employee ('Zordon',5);
+
+      var team1 = new Team();
+      team1.setUp("team1",alpha);
+      team1.add(jason);
+      team1.add(trini);
+      team1.add(zach);
+      team1.add(kimberly);
+      team1.add(billy);
+      team1.add(rose);
+
+      var powerTeam = new Team();
+      powerTeam.setUp("PowerTeam",zordon)
+      powerTeam.add(alpha);
+      powerTeam.add(team1);
+      powerTeam.performanceSummary();
+
+</script>

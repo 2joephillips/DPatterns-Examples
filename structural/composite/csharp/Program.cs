@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CompositeDemo
+﻿namespace CompositeDemo
 {
     public class Program
     {

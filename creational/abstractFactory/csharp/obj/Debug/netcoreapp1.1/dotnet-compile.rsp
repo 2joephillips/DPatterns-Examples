@@ -1,5 +1,5 @@
---temp-output:/Users/josephphillips/Sites/DPatterns-Examples/creational/csharp/obj/Debug/netcoreapp1.1/
---out:/Users/josephphillips/Sites/DPatterns-Examples/creational/csharp/bin/Debug/netcoreapp1.1/csharp.dll
+--temp-output:/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/obj/Debug/netcoreapp1.1/
+--out:/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/bin/Debug/netcoreapp1.1/csharp.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_1
@@ -87,4 +87,8 @@
 --reference:/Users/josephphillips/.nuget/packages/System.Threading.Timer/4.3.0/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/josephphillips/.nuget/packages/System.Xml.ReaderWriter/4.3.0/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/josephphillips/.nuget/packages/System.Xml.XDocument/4.3.0/ref/netstandard1.3/System.Xml.XDocument.dll
-/Users/josephphillips/Sites/DPatterns-Examples/creational/csharp/Program.cs
+/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/ChicagoStylePizza.cs
+/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/ChicagoStypleCheesePizza.cs
+/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/IPizza.cs
+/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/IPizzaStore.cs
+/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Program.cs

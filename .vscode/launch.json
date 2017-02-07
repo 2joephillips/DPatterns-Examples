@@ -1,12 +1,24 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Core Launch (State)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/behavioral/state/csharp/bin/Debug/netcoreapp1.1/csharp.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "externalConsole": false,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },        {
+            "name": ".NET Core Launch (AbstractFactory)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/creational/abstractFactory/csharp/bin/Debug/netcoreapp1.1/csharp.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "externalConsole": false,

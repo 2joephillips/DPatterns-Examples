@@ -1,5 +1,4 @@
 ﻿using System;
-using StateMachineDemo.States;
 
 namespace StateMachineDemo
 {

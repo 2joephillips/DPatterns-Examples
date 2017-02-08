@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using AbstractFactoryPattern.Contracts;
 
-namespace AbstractFactoryPattern {
+namespace AbstractFactoryPattern.Services {
     public class ChicagoStylePizza : IPizzaStore
     {
         List<String> Pizzas = new List<String>() {"Deep Dish Pizza", "Stuffed Pizza"};

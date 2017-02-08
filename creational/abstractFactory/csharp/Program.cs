@@ -16,7 +16,10 @@ namespace AbstractFactoryPattern
             IPizza pizza = store.orderPizza("Deep Dish");
             pizza.createPizza();
             
-             Console.WriteLine("Welcome."+ Environment.NewLine);
+            Console.WriteLine(Environment.NewLine);
+            Console.WriteLine(Environment.NewLine);
+
+            Console.WriteLine("Welcome."+ Environment.NewLine);
             IPizzaStore store1 = new NewYorkStylePizza();
             System.Console.WriteLine("What type of New York Style pizzas' do you have?"+ Environment.NewLine);
             store.listPizzas();

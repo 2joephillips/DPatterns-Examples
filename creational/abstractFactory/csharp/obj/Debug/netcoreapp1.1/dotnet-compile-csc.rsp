@@ -87,4 +87,7 @@
 "/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Contracts/IPizzaStore.cs"
 "/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/ChicagoStylePizza.cs"
 "/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/DeepDishPizza.cs"
+"/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/HandTossedPizza.cs"
+"/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/NewYorkStylePizza.cs"
 "/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/StuffedPizza.cs"
+"/Users/josephphillips/Sites/DPatterns-Examples/creational/abstractFactory/csharp/Services/ThinCrustPizza.cs"

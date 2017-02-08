@@ -8,15 +8,21 @@ namespace AbstractFactoryPattern
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome.");
+            Console.WriteLine("Welcome." + Environment.NewLine);
             IPizzaStore store = new ChicagoStylePizza();
-            System.Console.WriteLine("What type of Chicago Style pizzas' do you have?");
+            System.Console.WriteLine("What type of Chicago Style pizzas' do you have?"+ Environment.NewLine);
             store.listPizzas();
-            Console.WriteLine("Order Deep Dish Pizza.");
-            IPizza pizza = store.orderPizza("DeepDish");
+            Console.WriteLine("Can I order Deep Dish Pizza."+ Environment.NewLine);  
+            IPizza pizza = store.orderPizza("Deep Dish");
             pizza.createPizza();
             
-            
+             Console.WriteLine("Welcome."+ Environment.NewLine);
+            IPizzaStore store1 = new NewYorkStylePizza();
+            System.Console.WriteLine("What type of New York Style pizzas' do you have?"+ Environment.NewLine);
+            store.listPizzas();
+            Console.WriteLine("Can I order Deep Hand Tossed."+ Environment.NewLine);
+            IPizza pizza2 = store.orderPizza("HandTossed");
+            pizza.createPizza();
         }
     }
 }

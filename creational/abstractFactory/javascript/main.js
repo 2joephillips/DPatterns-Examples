@@ -1,5 +1,6 @@
 "use strict";
 
+
 var fromPrototype = function(prototype, object) {
     var newObject = Object.create(prototype);
     for (var prop in object) {

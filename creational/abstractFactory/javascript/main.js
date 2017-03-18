@@ -43,3 +43,36 @@ NewYorkStylePizza.prototype.createPizza = function(type){
     }
     return pizza;
 }
+
+var NewYorkStylePizzaHandTossed = function(){
+    return {
+        type: 'Hand Tossed'
+    }
+}
+
+var NewYorkStylePizzaThinCrust = function(){
+    return {
+        type: 'Thin Crust'
+    }
+}
+
+var ChicagoPizzaDeepDish = function(){
+    return {
+        type: 'Deep Dish'
+    }
+}
+
+var ChicagoPizzaStuffedPizza = function(){
+    return {
+        type: 'Stuffed Pizza'
+    }
+}
+
+var shop = new NewYorkStylePizza();
+var pizza = shop.sellPizza('HandTossed');
+console.log(pizza.type);
+
+shop = new ChicagoPizza();
+pizza = shop.sellPizza('DeepDish');
+console.log(pizza.type);
+

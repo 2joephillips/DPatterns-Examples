@@ -1,62 +1,45 @@
 "use strict";
+var PizzaShop = function(){};
 
-
-var fromPrototype = function(prototype, object) {
-    var newObject = Object.create(prototype);
-    for (var prop in object) {
-        if (object.hasOwnProperty(prop)) {
-            newObject[prop] = object[prop];
-        }
-    }
-  return newObject;
-};
-
-
-// Define our `Ingredients` base object
-var Pizza = {
-    createDough: function() {
-        return 'generic dough';
+PizzaShop.prototype = {
+    sellPizza: function(type){
+        var pizza = this.createPizza(type);
+        return pizza;
     },
-    createSauce: function() {
-        return 'generic sauce';
-    },
-    createCrust: function() {
-        return 'generic crust';
+    createPizza: function(type) {
+        throw new Error("createPizza must be implemented by subclass");
     }
-};
+}
 
-// Extend `Ingredients` with concrete implementations
-Pizza.createChicagoStyle = function() {
-    return fromPrototype(Pizza, {
-        createDough: function() {
-            return 'thick, heavy dough';
-        },
-        createSauce: function() {
-            return 'rich marinara';
-        },
-        createCrust: function() {
-            return 'deep-dish';
-        }
-    });
-};
+var ChicagoPizza = function(){};
+ChicagoPizza.prototype = new PizzaShop();
+ChicagoPizza.prototype.createPizza = function(type){
+    var pizza;
 
-Pizza.createCaliforniaStyle = function() {
-    return fromPrototype(Pizza, {
-        createDough: function() {
-            return 'light, fluffy dough';
-        },
-        createSauce: function() {
-            return 'tangy red sauce';
-        },
-        createCrust: function() {
-            return 'thin and crispy';
-        }
-    });
-};
+    switch(type) {
+        case 'DeepDish':
+            pizza = new ChicagoPizzaDeepDish();
+            break;
+        case 'StuffedPizza':
+            pizza = new ChicagoPizzaStuffedPizza();
+            break;
+    }
 
-// Try it out!
-var californiaIngredients = Pizza.createCaliforniaStyle();
-console.log(californiaIngredients.createCrust()); 
+    return pizza;
+}
 
-var chicagoStyle = Pizza.createChicagoStyle();
-console.log(chicagoStyle.createCrust());
+var NewYorkStylePizza = function(){};
+NewYorkStylePizza.prototype = new PizzaShop();
+NewYorkStylePizza.prototype.createPizza = function(type){
+    var pizza;
+
+    switch(type) {
+        case 'HandTossed':
+            pizza = new NewYorkStylePizzaHandTossed();
+            break;
+        case 'ThinCrust':
+            pizza = new NewYorkStylePizzaThinCrust();
+            break;
+    }
+    return pizza;
+}

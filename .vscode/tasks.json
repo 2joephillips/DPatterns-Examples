@@ -5,12 +5,15 @@
     "args": [],
     "tasks": [
         {
-            "taskName": "build",
-            "args": [
-                "${workspaceRoot}/behavioral/state/csharp/project.json"
+            "taskName": "tsrun",
+            "command": "tsc",
+            "isShellCommand": true,
+            "args":[
+                "-p", "."
             ],
-            "isBuildCommand": true,
-            "problemMatcher": "$msCompile"
+            "showOutput": "silent",
+                        "isBuildCommand": true,
+            "problemMatcher": "$tsc"
         }
     ]
 }

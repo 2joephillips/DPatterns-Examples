@@ -1,8 +1,0 @@
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/bin/Debug/netcoreapp1.1/csharp.deps.json
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/bin/Debug/netcoreapp1.1/csharp.runtimeconfig.json
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/bin/Debug/netcoreapp1.1/csharp.runtimeconfig.dev.json
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/bin/Debug/netcoreapp1.1/csharp.dll
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/bin/Debug/netcoreapp1.1/csharp.pdb
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/obj/Debug/netcoreapp1.1/csharp.AssemblyInfo.cs
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/obj/Debug/netcoreapp1.1/csharp.dll
-/Users/josephphillips/Sites/DPatterns-Examples/behavioral/builder/csharp/obj/Debug/netcoreapp1.1/csharp.pdb

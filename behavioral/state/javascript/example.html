@@ -1,43 +1,43 @@
 <script>
-    var TrafficLight = function () {
+var TrafficLight = function () {
     var count = 0;
-    var currentState = new Red(this);
- 
+    var currentState = new RedLight(this);
+
     this.change = function (state) {
         // limits number of changes
         if (count++ >= 10) return;
         currentState = state;
-        currentState.go();
+        currentState.run();
     };
- 
+
     this.start = function () {
-        currentState.go();
+        currentState.run();
     };
 }
- 
-var Red = function (light) {
+    
+var RedLight = function (light) {
     this.light = light;
  
-    this.go = function () {
+    this.run = function () {
         document.write("Red --> for 30 Seconds <br>");
-        setTimeout(function(){light.change(new Green(light));}, 1000);
+        setTimeout(function(){light.change(new GreenLight(light));}, 1000);
     }
 };
  
-var Yellow = function (light) {
+var YellowLight = function (light) {
     this.light = light;
  
-    this.go = function () {
+    this.run = function () {
         document.write("Yellow --> for 10 seconds <br>");
-        setTimeout(function(){light.change(new Red(light));}, 1000);
+        setTimeout(function(){light.change(new RedLight(light));}, 1000);
     }
 };
  
-var Green = function (light) {
+var GreenLight = function (light) {
     this.light = light;
-    this.go = function () {
+    this.run = function () {
         document.write("Green --> for 30 Seconds <br>");
-        setTimeout(function(){light.change(new Yellow(light));}, 1000);
+        setTimeout(function(){light.change(new YellowLight(light));}, 1000);
     }
 };
 

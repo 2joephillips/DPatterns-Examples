@@ -3,32 +3,38 @@ using System.Collections.Generic;
 
 namespace csharp
 {
-    class CarBuilder : VehicleBuilder
+    class CarBuilder : IVehicleBuilder
 	{
+		public Vehicle vehicle { get; set; }		
 		public CarBuilder()
 		{
 			vehicle = new Vehicle("Car");
 		}
 
-		public override void BuildFrame()
+		public  void BuildFrame()
 		{
 			vehicle["frame"] = "Car Frame";
 		}
 
-		public override void BuildEngine()
+		public  void BuildEngine()
 		{
 			vehicle["engine"] = "2500 cc";
 		}
 
-		public override void BuildWheels()
+		public  void BuildWheels()
 		{
 			vehicle["wheels"] = "4";
 		}
 
-		public override void BuildDoors()
+		public  void BuildDoors()
 		{
 			vehicle["doors"] = "4";
 		}
+
+		public Vehicle GetVehicle()
+        {
+            return vehicle;
+        }
 	}
 
 }

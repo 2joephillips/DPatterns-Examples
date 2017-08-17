@@ -4,20 +4,23 @@
     {
         static void Main()
         {
-            VehicleBuilder builder;
+            IVehicleBuilder builder;
             Shop shop = new Shop();
 
             builder = new ScooterBuilder();
             shop.Construct(builder);
-            builder.Vehicle.Show();
+            var scooter = builder.GetVehicle();
+            scooter.Show();
 
             builder = new CarBuilder();
             shop.Construct(builder);
-            builder.Vehicle.Show();
-
-			builder = new MotorCycleBuilder();
+            Vehicle car = builder.GetVehicle();
+            car.Show();
+            
+            builder = new MotorcycleBuilder();
 			shop.Construct(builder);
-			builder.Vehicle.Show();
+			var motorcycle = builder.GetVehicle();
+            motorcycle.Show();
 
         }
     }

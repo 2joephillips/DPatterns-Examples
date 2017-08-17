@@ -1,8 +1,11 @@
 namespace csharp
 {
+/// <summary>
+/// The 'Director' class
+/// </summary>
     internal class Shop
     {
-        public void Construct(VehicleBuilder vehicleBuilder)
+        public void Construct(IVehicleBuilder vehicleBuilder)
         {
             vehicleBuilder.BuildFrame();
             vehicleBuilder.BuildEngine();
